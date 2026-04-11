@@ -23,40 +23,42 @@ icons.forEach((icon) => {
 });
 
 /* Валидация формы */
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  let isValid = true;
-
-  // Проверка комментария
-  if (comment.value.trim() === "") {
-    commentError.textContent = "Пожалуйста, поделитесь мнением";
-    isValid = false;
-  } else {
-    commentError.textContent = "";
-  }
-
-  // Проверка иллюстрации
-  if (!selectedIcon) {
-    iconError.textContent = "Выберите иллюстрацию";
-    isValid = false;
-  } else {
-    iconError.textContent = "";
-  }
-
-  // Проверка согласия
-  if (!agreement.checked) {
-    agreementError.textContent =
-      "Необходимо согласие на обработку данных";
-    isValid = false;
-  } else {
-    agreementError.textContent = "";
-  }
-
-  if (isValid) {
-    alert("Отзыв успешно отправлен!");
-    form.reset();
-    icons.forEach((i) =>    i.classList.remove("active"));
-    selectedIcon = null;
-  }
-});
+//form.addEventListener("submit", (e) => {
+//  e.preventDefault();
+//
+//  let isValid = true;
+//
+//  // Проверка комментария
+//  if (comment.value.trim() === "") {
+//    commentError.textContent = "Пожалуйста, поделитесь мнением";
+//    isValid = false;
+//  } else {
+//    commentError.textContent = "";
+//  }
+//
+//  // Проверка иллюстрации
+//  if (!selectedIcon) {
+//    iconError.textContent = "Выберите иллюстрацию";
+//    isValid = false;
+//  } else {
+//    iconError.textContent = "";
+//  }
+//
+//  // Проверка согласия
+//  if (!agreement.checked) {
+//    agreementError.textContent =
+//      "Необходимо согласие на обработку данных";
+//    isValid = false;
+//  } else {
+//    agreementError.textContent = "";
+//  }
+//
+//  if (isValid) {
+//    alert("Отзыв успешно отправлен!");
+//    form.reset();
+//    icons.forEach((i) =>    i.classList.remove("active"));
+//    selectedIcon = null;
+//
+//
+//  }
+//});
