@@ -20,12 +20,13 @@
     <div class="card">
       <h2>Оставьте отзыв</h2>
 
-      <form id="reviewForm">
+      <form action="/api/addEventsForm" method="post" id="reviewForm">
         <input type="hidden" name="event_id" value="{{ event_id }}">
         <input type="hidden" name="registration_id" value="{{ registration_id }}">
+        <input type="hidden" name="images_events" id='avatar' value="/temp/getLogo/lemon.png">
         <label>
           <span id="shear"><span class="highlight">*</span>Поделитесь мнением</span>
-          <textarea
+          <textarea name="content"
             id="textsecond"
             id="comment"
             class="text"

@@ -17,6 +17,8 @@ icons.forEach((icon) => {
     icon.classList.add("active");
     selectedIcon = icon.dataset.value;
     iconError.textContent = "";
+    let img = document.getElementById("avatar");
+    img.value = icon.dataset.value;
   });
 });
 
@@ -54,7 +56,7 @@ form.addEventListener("submit", (e) => {
   if (isValid) {
     alert("Отзыв успешно отправлен!");
     form.reset();
-    icons.forEach((i) => i.classList.remove("active"));
+    icons.forEach((i) =>    i.classList.remove("active"));
     selectedIcon = null;
   }
 });
